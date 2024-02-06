@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="theme-style" rel="stylesheet" type="text/css" href="light.css">
+</head>
+
+<body>
+    <nav style="display: flex;gap:20px">
+        <button style="color:red;font-weight:bolder; width: 200px; height: 40px;font-size: 18px;"
+            onclick="changeContent('content1')">About Myself</button>
+        <button style="color:red;font-weight:bolder;width: 200px; height: 40px;font-size: 18px;"
+            onclick="changeContent('content2')">Education</button>
+        <button style="color:red;font-weight:bolder;width: 200px; height: 40px;font-size: 18px;"
+            onclick="changeContent('content3')">Achievements</button>
+        <button style="color:red;font-weight:bolder;width: 200px; height: 40px;font-size: 18px;"
+            onclick="changeContent('content4')">Skills and hobbies</button>
+        <button style="color:red;font-weight:bolder;width: 200px; height: 40px;font-size: 18px;"
+            onclick="changeContent('content5')">Socials</button>
+        <button style="color:red;font-weight:bolder;width: 200px; height: 40px;font-size: 18px;"
+            onclick="changeContent('content6')">Blogs</button>
+        <button id="toggle-theme"
+            style="color:red;font-weight:bolder;width: 200px; height: 40px;font-size: 18px;">Toggle Theme</button>
+    </nav>
+    <h1 style="text-align: center;margin-top: 3%; font-size: 50px;color: #FF3BBB;">About Myself</h1>
+
+    <div class="top">
+        <img src="Untitled(1)(1).png" ;alt="Profile Image">
+        <div id="content" style="width: 60%;">
+            <p class="content-main">
+                Hello! I am Swam Singla, currently in my first year of
+                pursuing a Bachelor of Technology in Computer Science and Engineering at the IIIT Hyderabad.
+                As a technology enthusiast, I am deeply passionate about exploring the realms of software development,
+                algorithms, and cutting-edge technologies.
+                My journey at IIIT Hyderabad is not just about acquiring technical knowledge, but also about developing
+                skills that will enable me to contribute
+                meaningfully to the field of computer science.</p>
+        </div>
+    </div>
+    <a href="Assignment 1-1.pdf" target="_blank"
+        style="display: flex;justify-content: center;align-items: center;text-align: center;margin-top: 30px;font-size: 30px">Link
+        to external pdf</a>
+
+    <script>
+        function changeContent(content) {
+            var contentElement = document.getElementById('content');
+            contentElement.className = '';
+            contentElement.classList.remove('animated-content');
+            switch (content) {
+                case 'content1':
+                    contentElement.innerHTML = `<p class="content1-style";>Hello! I am Swam Singla, currently in my first year of pursuing a Bachelor of Technology in Computer Science and Engineering at the International Institute of Information Technology (IIIT) Hyderabad. As a technology enthusiast, I am deeply passionate about exploring the realms of software development, algorithms, and cutting-edge technologies. My journey at IIIT Hyderabad is not just about acquiring technical knowledge, but also about developing skills that will enable me to contribute meaningfully to the field of computer science and the tech industry at large.</p>`;
+                    setTimeout(() => contentElement.classList.add('animated-content1'), 10);
+                    break;
+                case 'content2':
+                    contentElement.innerHTML = `<ul class="ul1">
+                                            <li>Schooling till 10th -> D.N. Model Senior Secondary School, Moga</li>
+                                            <li>Schooling after 12th -> National Convent School, Moga</li>
+                                            <li>JEE Coaching -> Edusquare Coachings, Ludhiana</li>
+                                            <li>College -> B.tech in CSE at IIIT Hyderabad</li>
+                                        </ul>`;
+                    setTimeout(() => contentElement.classList.add('fade-in-left-animation'), 10);
+                    break;
+                case 'content3':
+                    contentElement.innerHTML = `<ul class="ul2">
+                                            <li>10th board percentage ->  95%</li>
+                                            <li>12th board percentage ->  93%</li>
+                                            <li>JEE Mains 2023 Rank   ->  872</li>
+                                            <li>JEE Advanced 2023 Rank ->  1563</li>
+                                        </ul>`;
+                    setTimeout(() => contentElement.classList.add('rotate-in-animation'), 10);
+                    break;
+                case 'content4':
+                    contentElement.innerHTML = `<ul class="ul3">
+    <li>I am state level quizzer.</li>
+    <li>I like following politics and news related to it.</li>
+    <li>I am enthusiastic about new and budding technologies which are capable of revolutionising world.</li> 
+                                        </ul>`;
+                    setTimeout(() => contentElement.classList.add('slide-fade-in-animation'), 10);
+                    break;
+                case 'content5':
+                    contentElement.innerHTML = `<a href="https://www.instagram.com/swam_singla/" target="_blank" title="visit instagram" >
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram" style="width: 12%; height: auto;margin-left: 5%; margin-top: 18%;">
+    </a>
+    <a href="https://github.com/swamsingla1" target="_blank"  title="visit github">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Instagram" style="width: 12%; height: auto;margin-left: 9%; margin-top: 18%;">
+    </a>
+    <a href="mailto:swam.singla@students.iiit.ac.in" target="_blank"  title="send email">
+        <img src="https://static.vecteezy.com/system/resources/previews/018/931/264/original/black-mail-icon-png.png" alt="Instagram" style="width: 12%; height: auto;margin-left: 9%; margin-top: 18%;">
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100095503985096" target="_blank"  title="visit facebook">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt="Instagram" style="width: 12%; height: auto;margin-left: 9%; margin-top: 14%;">
+    </a>`;
+                    setTimeout(() => contentElement.classList.add('slide-in-animation'), 10);
+                    break;
+                case 'content6':
+                    contentElement.innerHTML = `<ul class="ul3">
+    <li><a href="blog1.html" target="_blank">Click to open blog on mental health awareness.</a></li>
+    <li><a href="blog2.html" target="_blank">Click to open blog on cryptocurrency.</a></li>
+                                        </ul>`;
+                    break;
+                default:
+                    contentElement.innerHTML = 'Click a button to change this content.';
+            }
+        }
+
+        document.getElementById('toggle-theme').addEventListener('click', function () {
+
+            var currentTheme = document.getElementById('theme-style').getAttribute('href');
+
+            var newTheme = currentTheme === 'light.css' ? 'dark.css' : 'light.css';
+            document.getElementById('theme-style').setAttribute('href', newTheme);
+        })
+
+        window.addEventListener('load', adjustBodyPadding);
+        window.addEventListener('resize', adjustBodyPadding);
+
+        function adjustBodyPadding() {
+            const navbarHeight = document.querySelector('nav').offsetHeight;
+            document.body.style.paddingTop = `${navbarHeight}px`;
+        };
+    </script>
+</body>
+
+</html>

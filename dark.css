@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    padding-top: 70px;
+    background-color: #2B2B2B;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    color: #E0E0E0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: #444444;
+    border: 2px solid #888888;
+    border-radius: 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #AAA #333333;
+}
+
+nav button {
+    color: #FFA07A;
+    font-weight: bolder;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid #888;
+}
+
+nav::-webkit-scrollbar {
+    height: 4px;
+}
+
+nav::-webkit-scrollbar-thumb {
+    background: #AAA;
+}
+
+nav::-webkit-scrollbar-track {
+    background: #333333;
+}
+
+.navbar button:hover {
+    color: #FFD700;
+    animation: scaleUp 0.5s ease forwards;
+}
+
+.top {
+    display: flex;
+    margin: 4% 15% 0;
+    border: 2px solid #555;
+    border-radius: 20px;
+    padding: 0.8%;
+    background-color: #333333;
+    height: auto;
+    overflow-y: auto;
+}
+
+.top img {
+    margin: 1%;
+    height: auto;
+    width: 25%;
+}
+
+.content1-style,
+.ul1,
+.ul2,
+.ul3 {
+    padding: 20px;
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.insta_image {
+    width: 100px;
+    height: auto;
+    padding: 20px;
+    margin-top: 90px;
+    margin-left: 40px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-content1 {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-left-animation {
+    animation: fadeInLeft 1s ease forwards;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.scale-up-animation {
+    animation: scaleUp 0.5s ease forwards;
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(-360deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.rotate-in-animation {
+    animation: rotateIn 1s ease forwards;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce-animation {
+    animation: bounce 2s ease forwards;
+}
+
+@keyframes slideFadeIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-fade-in-animation {
+    animation: slideFadeIn 0.5s ease-out forwards;
+}
+
+@media (max-width: 925px) {
+    body {
+        padding-top: 80px;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 5px 0;
+    }
+
+    nav button {
+        width: auto;
+    }
+
+    .top {
+        flex-direction: column;
+        margin: 4% auto;
+    }
+
+    .top img {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .content1-style,
+    .ul1,
+    .ul2,
+    .ul3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        padding-top: 60px;
+    }
+
+    nav {
+        padding: 5px 0;
+
+        nav button {
+            font-size: 14px;
+            padding: 5px 8px;
+        }
+    }
+}
